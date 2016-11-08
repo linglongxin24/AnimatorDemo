@@ -17,13 +17,14 @@ QQ运动和抛物线动画。效果图如下：
  我们只需要将初始值和结束值提供给ValueAnimator，并且告诉它动画所需运行的时长，
  那么ValueAnimator就会自动帮我们完成从初始值平滑地过渡到结束值这样的效果。
  
-  * ObjectAnimator是ValueAnimator的子类
+ * ObjectAnimator是ValueAnimator的子类
   
   ObjectAnimator是ValueAnimator的子类，他本身就已经包含了时间引擎和值计算，所以它拥有为对象的某个属性设置动画的功能。
   这使得为任何对象设置动画更加的容易。你不再需要实现 ValueAnimator.AnimatorUpdateListener接口，
-  因为ObjectAnimator动画自己会自动更新相应的属性值。举例：
+  因为ObjectAnimator动画自己会自动更新相应的属性值。
+  ObjectAnimator的实例和ValueAnimator是类似的，但是你需要描叙该对象，需要设置动画的属性的名字(一个字符串)，以及动画属性值的变化范围。
+  举例：
   
-  ObjectAnimator的实例和ValueAnimator是类似的，但是你需要描叙该对象，需要设置动画的属性的名字(一个字符串)，以及动画属性值的变化范围:
    /**
     * 第一个参数：所要作用的目标控件
     * 第二个参数：所要操作该控件的属性值
