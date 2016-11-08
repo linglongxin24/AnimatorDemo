@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                         .before(objectAnimatorRotateX1).before(objectAnimatorRotateY1);
                 animatorSetGroup1.start();
                 break;
-            case R.id.animation_group2://先播放旋转动画，完成后播放位移动画，在xml中设置第二个动画执行的等待时间
+            case R.id.animation_group2://先播放旋转动画，完成后播放位移动画
                 AnimatorSet animatorSetGroup2 = new AnimatorSet();
                 ObjectAnimator objectAnimatorTranslate2 = ObjectAnimator.ofFloat(iv, "translationX", 0f, 500f);
                 ObjectAnimator objectAnimatorRotateX2 = ObjectAnimator.ofFloat(iv, "rotationX", 0f, 360f);
